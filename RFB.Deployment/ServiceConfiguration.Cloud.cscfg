@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="RFB.Deployment" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="RFB.Web">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=rfbdev;AccountKey=eH8oH+8Pqr8zOB4gfnIwUjcXWu00kkKEHCh0MvKQE1ZUaehyroOBIhIqfxNre1vaqCHLiNap4m0WXaXvaCwajQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="rfbuser" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEAbdFk31EA6wRnUVOljVgU0wDQYJKoZIhvcNAQEBBQAEggEAQOOeB9KMgaSHB5KovwBdnZDye/MTy8VVRVw4AD9kE1DxSz2qf5ohMhJLNQsf/ThpH5gQFJgbkSuLRxhgcsQOaKw7VNnGporg7LXiZxnnBZvqyJ8UWkEKhCwpI44+eJlQht2H1o7v3EpU3/wegUdzkOGvmmk6ZioRWwdFwR+5gvhQhvzttDKlclXy9gnCdIf+Jd66Z5ez0GG8mNoE0ItKPCmHPOSLpyrlBoAnU8+xo+mhr+TI8WM+wZX+MHzPL9YaTSqqa1HxBq3WCBD+ZzTsospqJGX9h4JKy+u9zS1TsUKrQZ/MgVvQz4ItqfsgP+mAaEAhYa1Rd9MkVifVHn09ozAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECCOzMI+8fpQlgBDduzcOW5MlgD3499/GN6rf" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-09-29T23:59:59.0000000+05:30" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="4A38D0E09A5C936F207D2EF8000ACF12F0FB4623" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+ <NetworkConfiguration>
+    <AddressAssignments>
+      <ReservedIPs>
+        <ReservedIP name="test"/>
+      </ReservedIPs>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>
